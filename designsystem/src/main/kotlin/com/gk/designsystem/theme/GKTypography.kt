@@ -1,4 +1,4 @@
-package com.gk.designsystem.tokens
+package com.gk.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Immutable
