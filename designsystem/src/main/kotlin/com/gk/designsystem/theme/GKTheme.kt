@@ -6,8 +6,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 import com.gk.designsystem.tokens.GKDefaultSpacing
+import com.gk.designsystem.tokens.GKDefaultTypography
 import com.gk.designsystem.tokens.GKSpacing
+import com.gk.designsystem.tokens.GKTypography
 import com.gk.designsystem.tokens.LocalGKSpacing
+import com.gk.designsystem.tokens.LocalGKTypography
+import com.gk.designsystem.tokens.toMaterial3Typography
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GKTheme — the single entry point for all design tokens
@@ -69,4 +73,3 @@ object GKTheme {
         @ReadOnlyComposable
         get() = LocalGKSpacing.current
 }
-
