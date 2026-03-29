@@ -1,4 +1,4 @@
-package com.example.designsystem
+package com
 
 class DesignSystem {
     fun getLibraryName(): String = "DesignSystem"

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.designsystem.demo"
+    namespace = "com.gk.designsystem.demo"
     compileSdk = 34
 
     defaultConfig {

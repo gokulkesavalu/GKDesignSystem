@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.designsystem.MyButton
+import com.gk.designsystem.components.GKButton
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Box(contentAlignment = Alignment.Center) {
-                        MyButton(text = "Demo Button", onClick = { })
+                        GKButton(text = "Demo Button", onClick = { })
                     }
                 }
             }
