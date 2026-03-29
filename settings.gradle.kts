@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "GKDesignSystem"
 include(":designsystem")
+include(":demo")
