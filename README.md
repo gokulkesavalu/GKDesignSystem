@@ -12,8 +12,9 @@ A modern, Jetpack Compose-based design system providing a consistent set of toke
 - **Semantic Tokens**: Role-based color schemes, spacing scales, and typography styles.
 - **Theme Support**: Built-in support for Light and Dark modes using `GKTheme`.
 - **Core Components**:
-    - `GKText`: Typography-consistent text component.
-    - `GKButton`: Themed button with primary branding.
+    - `GKText`: Typography-consistent text component with support for variants and standard text properties.
+    - `GKButton`: Themed button with primary, secondary, and outline variants, plus status support (Enabled, Disabled, Loading).
+    - `GKCard`: Flexible container with Filled, Elevated, and Outlined variants.
 
 ## Getting Started
 
@@ -31,15 +32,30 @@ GKTheme {
 
 #### GKText
 ```kotlin
-GKText(text = "Hello GK Design System")
+GKText(
+    text = "Hello GK Design System",
+    variant = TextVariant.HEADLINE_MEDIUM
+)
 ```
 
 #### GKButton
 ```kotlin
 GKButton(
     text = "Click Me",
-    onClick = { /* Handle click */ }
+    onClick = { /* Handle click */ },
+    type = ButtonType.PRIMARY,
+    status = ButtonStatus.ENABLED
 )
+```
+
+#### GKCard
+```kotlin
+GKCard(variant = CardVariant.ELEVATED) {
+    Column(modifier = Modifier.padding(GKTheme.spacing.md)) {
+        GKText(text = "Card Title", variant = TextVariant.TITLE_MEDIUM)
+        GKText(text = "Card content goes here.")
+    }
+}
 ```
 
 ## Design Tokens
@@ -55,3 +71,4 @@ Spacing is based on a 4dp grid. Use `GKTheme.spacing` to access standardized val
 ### Typography
 Consistent text styles provided via `GKTheme.typography`:
 - `displayLarge`, `headlineMedium`, `bodyMedium`, etc.
+- Accessible via `TextVariant` in `GKText`.
